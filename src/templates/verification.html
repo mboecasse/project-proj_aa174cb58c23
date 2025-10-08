@@ -1,0 +1,189 @@
+<!-- File: src/templates/verification.html -->
+<!-- Generated: 2025-10-08 13:05:11 UTC -->
+<!-- Project ID: proj_aa174cb58c23 -->
+<!-- Task ID: task_9tfn7rxsenfl -->
+
+body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .header h1 {
+            color: #ffffff;
+            margin: 0;
+            font-size: 28px;
+            font-weight: 600;
+        }
+        .content {
+            padding: 40px 30px;
+            color: #333333;
+            line-height: 1.6;
+        }
+        .content h2 {
+            color: #667eea;
+            font-size: 24px;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+        .content p {
+            margin: 15px 0;
+            font-size: 16px;
+        }
+        .verification-button {
+            display: inline-block;
+            margin: 30px 0;
+            padding: 15px 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            font-size: 16px;
+            text-align: center;
+        }
+        .verification-button:hover {
+            background: linear-gradient(135deg, #5568d3 0%, #6a3f8f 100%);
+        }
+        .button-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+        .token-box {
+            background-color: #f8f9fa;
+            border: 2px dashed #667eea;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 20px 0;
+            text-align: center;
+            font-family: 'Courier New', monospace;
+            font-size: 18px;
+            color: #667eea;
+            font-weight: bold;
+            word-break: break-all;
+        }
+        .alternative-text {
+            font-size: 14px;
+            color: #666666;
+            margin: 20px 0;
+        }
+        .link-text {
+            font-size: 12px;
+            color: #999999;
+            word-break: break-all;
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-radius: 3px;
+            margin: 10px 0;
+        }
+        .footer {
+            background-color: #f8f9fa;
+            padding: 30px;
+            text-align: center;
+            color: #666666;
+            font-size: 14px;
+            border-top: 1px solid #e0e0e0;
+        }
+        .footer p {
+            margin: 10px 0;
+        }
+        .warning {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 3px;
+        }
+        .warning p {
+            margin: 0;
+            color: #856404;
+            font-size: 14px;
+        }
+        .info-box {
+            background-color: #e7f3ff;
+            border-left: 4px solid #2196F3;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 3px;
+        }
+        .info-box p {
+            margin: 0;
+            color: #0c5460;
+            font-size: 14px;
+        }
+        @media only screen and (max-width: 600px) {
+            .content {
+                padding: 30px 20px;
+            }
+            .header h1 {
+                font-size: 24px;
+            }
+            .content h2 {
+                font-size: 20px;
+            }
+            .verification-button {
+                padding: 12px 30px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="header">
+            <h1>Email Verification</h1>
+        </div>
+
+        <div class="content">
+            <h2>Welcome, {{name}}!</h2>
+
+            <p>Thank you for registering with us. We're excited to have you on board!</p>
+
+            <p>To complete your registration and activate your account, please verify your email address by clicking the button below:</p>
+
+            <div class="button-container">
+                <a href="{{verificationUrl}}" class="verification-button">Verify Email Address</a>
+            </div>
+
+            <div class="alternative-text">
+                <p><strong>Alternative verification method:</strong></p>
+                <p>If the button above doesn't work, you can copy and paste the following link into your browser:</p>
+                <div class="link-text">{{verificationUrl}}</div>
+            </div>
+
+            <div class="info-box">
+                <p><strong>Verification Code:</strong> If you prefer to verify manually, use this code: <strong>{{token}}</strong></p>
+            </div>
+
+            <div class="warning">
+                <p><strong>Important:</strong> This verification link will expire in <strong>24 hours</strong>. If the link expires, you'll need to request a new verification email.</p>
+            </div>
+
+            <p>If you didn't create an account with us, please ignore this email or contact our support team if you have concerns.</p>
+
+            <p>Best regards,<br>The Support Team</p>
+        </div>
+
+        <div class="footer">
+            <p><strong>Need Help?</strong></p>
+            <p>If you have any questions or need assistance, please don't hesitate to contact our support team.</p>
+            <p style="margin-top: 20px; font-size: 12px; color: #999999;">
+                This is an automated email. Please do not reply to this message.
+            </p>
+            <p style="font-size: 12px; color: #999999;">
+                &copy; {{year}} All rights reserved.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

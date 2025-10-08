@@ -1,0 +1,208 @@
+<!-- File: src/templates/welcome.html -->
+<!-- Generated: 2025-10-08 13:05:26 UTC -->
+<!-- Project ID: proj_aa174cb58c23 -->
+<!-- Task ID: task_vjx6nsavpkj3 -->
+
+body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .header h1 {
+            color: #ffffff;
+            margin: 0;
+            font-size: 28px;
+            font-weight: 600;
+        }
+        .content {
+            padding: 40px 30px;
+            color: #333333;
+            line-height: 1.6;
+        }
+        .content h2 {
+            color: #667eea;
+            font-size: 24px;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+        .content p {
+            margin: 15px 0;
+            font-size: 16px;
+        }
+        .success-icon {
+            text-align: center;
+            margin: 30px 0;
+        }
+        .success-icon svg {
+            width: 80px;
+            height: 80px;
+        }
+        .button-container {
+            text-align: center;
+            margin: 35px 0;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: 600;
+            transition: transform 0.2s;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+        .features {
+            background-color: #f9f9f9;
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+        .features h3 {
+            color: #667eea;
+            font-size: 20px;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+        .feature-item {
+            margin: 15px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+        .feature-item:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .footer {
+            background-color: #333333;
+            color: #ffffff;
+            padding: 30px;
+            text-align: center;
+            font-size: 14px;
+        }
+        .footer p {
+            margin: 10px 0;
+        }
+        .footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        .divider {
+            height: 1px;
+            background-color: #e0e0e0;
+            margin: 30px 0;
+        }
+        .highlight {
+            background-color: #fff3cd;
+            padding: 20px;
+            border-left: 4px solid #ffc107;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        @media only screen and (max-width: 600px) {
+            .content {
+                padding: 30px 20px;
+            }
+            .header h1 {
+                font-size: 24px;
+            }
+            .content h2 {
+                font-size: 20px;
+            }
+            .cta-button {
+                padding: 12px 30px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="header">
+            <h1>Welcome to Our Platform!</h1>
+        </div>
+
+        <div class="content">
+            <div class="success-icon">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="50" r="45" fill="#4caf50" opacity="0.2"/>
+                    <circle cx="50" cy="50" r="35" fill="none" stroke="#4caf50" stroke-width="3"/>
+                    <path d="M30 50 L45 65 L70 35" fill="none" stroke="#4caf50" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+
+            <h2>Your Account is Now Active! 🎉</h2>
+
+            <p>Hello {{name}},</p>
+
+            <p>Congratulations! Your email address has been successfully verified, and your account is now fully activated. We're thrilled to have you join our community!</p>
+
+            <div class="highlight">
+                <p><strong>What's Next?</strong></p>
+                <p>You can now access all features of our platform. Start exploring and make the most of your account!</p>
+            </div>
+
+            <div class="button-container">
+                <a href="{{loginUrl}}" class="cta-button">Get Started</a>
+            </div>
+
+            <div class="features">
+                <h3>What You Can Do Now:</h3>
+                <div class="feature-item">Access your personalized dashboard</div>
+                <div class="feature-item">Complete your profile settings</div>
+                <div class="feature-item">Explore all available features</div>
+                <div class="feature-item">Connect with other users</div>
+                <div class="feature-item">Start using our services immediately</div>
+            </div>
+
+            <div class="divider"></div>
+
+            <p><strong>Need Help Getting Started?</strong></p>
+            <p>If you have any questions or need assistance, our support team is here to help. Feel free to reach out to us at <a href="mailto:{{supportEmail}}" style="color: #667eea;">{{supportEmail}}</a>.</p>
+
+            <p>You can also visit our <a href="{{helpCenterUrl}}" style="color: #667eea;">Help Center</a> for guides, tutorials, and frequently asked questions.</p>
+
+            <div class="divider"></div>
+
+            <p><strong>Security Reminder:</strong></p>
+            <p>For your security, never share your password with anyone. If you didn't create this account, please contact us immediately.</p>
+
+            <p>Thank you for choosing our platform. We're excited to see what you'll accomplish!</p>
+
+            <p>Best regards,<br>
+            <strong>The Team</strong></p>
+        </div>
+
+        <div class="footer">
+            <p>&copy; {{year}} {{companyName}}. All rights reserved.</p>
+            <p>
+                <a href="{{privacyUrl}}">Privacy Policy</a> |
+                <a href="{{termsUrl}}">Terms of Service</a> |
+                <a href="{{unsubscribeUrl}}">Unsubscribe</a>
+            </p>
+            <p>{{companyAddress}}</p>
+            <p style="color: #888888; font-size: 12px; margin-top: 20px;">
+                This email was sent to {{email}}. If you received this email by mistake, please ignore it.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

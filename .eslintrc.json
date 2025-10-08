@@ -1,0 +1,82 @@
+{
+  "env": {
+    "node": true,
+    "es2021": true,
+    "jest": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:node/recommended"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2021,
+    "sourceType": "module"
+  },
+  "rules": {
+    "no-console": ["warn", { "allow": ["warn", "error"] }],
+    "no-unused-vars": ["error", { "argsIgnorePattern": "^_", "varsIgnorePattern": "^_" }],
+    "no-var": "error",
+    "prefer-const": "error",
+    "prefer-arrow-callback": "error",
+    "arrow-spacing": ["error", { "before": true, "after": true }],
+    "comma-dangle": ["error", "never"],
+    "quotes": ["error", "single", { "avoidEscape": true }],
+    "semi": ["error", "always"],
+    "indent": ["error", 2, { "SwitchCase": 1 }],
+    "linebreak-style": ["error", "unix"],
+    "no-trailing-spaces": "error",
+    "eol-last": ["error", "always"],
+    "object-curly-spacing": ["error", "always"],
+    "array-bracket-spacing": ["error", "never"],
+    "space-before-blocks": "error",
+    "keyword-spacing": ["error", { "before": true, "after": true }],
+    "space-infix-ops": "error",
+    "no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 0 }],
+    "no-multi-spaces": "error",
+    "brace-style": ["error", "1tbs", { "allowSingleLine": true }],
+    "camelcase": ["error", { "properties": "never" }],
+    "consistent-return": "error",
+    "curly": ["error", "all"],
+    "default-case": "error",
+    "dot-notation": "error",
+    "eqeqeq": ["error", "always"],
+    "no-alert": "error",
+    "no-caller": "error",
+    "no-eval": "error",
+    "no-implied-eval": "error",
+    "no-return-await": "error",
+    "no-throw-literal": "error",
+    "no-useless-catch": "error",
+    "require-await": "error",
+    "yoda": "error",
+    "no-shadow": "error",
+    "no-use-before-define": ["error", { "functions": false, "classes": true, "variables": true }],
+    "array-callback-return": "error",
+    "no-loop-func": "error",
+    "no-param-reassign": ["error", { "props": false }],
+    "prefer-template": "error",
+    "template-curly-spacing": ["error", "never"],
+    "prefer-destructuring": ["error", { "object": true, "array": false }],
+    "no-nested-ternary": "error",
+    "max-len": ["warn", { "code": 120, "ignoreUrls": true, "ignoreStrings": true, "ignoreTemplateLiterals": true }],
+    "max-depth": ["warn", 4],
+    "max-params": ["warn", 5],
+    "complexity": ["warn", 15],
+    "node/no-unsupported-features/es-syntax": ["error", { "ignores": ["modules"] }],
+    "node/no-missing-require": "error",
+    "node/no-unpublished-require": "off",
+    "node/no-extraneous-require": "error"
+  },
+  "overrides": [
+    {
+      "files": ["**/*.test.js", "**/*.spec.js"],
+      "env": {
+        "jest": true
+      },
+      "rules": {
+        "no-unused-expressions": "off",
+        "max-nested-callbacks": "off"
+      }
+    }
+  ]
+}

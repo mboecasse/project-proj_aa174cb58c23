@@ -1,0 +1,69 @@
+jspm_packages/
+bower_components/
+
+# Testing
+coverage/
+.nyc_output/
+*.lcov
+
+# IDE/Editor Directories
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS Generated Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary Files
+*.tmp
+*.bak
+*.swp
+
+# Compiled Binary Addons
+build/Release
+*.node
+
+# Dependency Directories
+pnpm-lock.yaml
+yarn.lock
+package-lock.json
+
+# Backup Files
+*.bak
+*.gho
+*.ori
+*.orig
+*.tmp
+
+# Compression Files
+*.zip
+*.tar
+*.tar.gz
+
+# Specific Project Ignores
+uploads/
+public/uploads/
+.cache/
+
+# Security
+*.pem
+*.key
+*.cert
+
+# Miscellaneous
+.serverless/
+.fusebox/
+.dynamodb/
+.next/
+.nuxt/
+
+# Typescript
+*.tsbuildinfo

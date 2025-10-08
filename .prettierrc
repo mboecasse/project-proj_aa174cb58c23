@@ -1,0 +1,29 @@
+// File: .prettierrc
+// Generated: 2025-10-08 13:05:06 UTC
+// Project ID: proj_aa174cb58c23
+// Task ID: task_ictobfcxuxg5
+
+{
+  "semi": true,
+  "singleQuote": true,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "printWidth": 100,
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "auto",
+  "useTabs": false,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "jsxSingleQuote": false,
+  "jsxBracketSameLine": false,
+  "htmlWhitespaceSensitivity": "css",
+  "overrides": [
+    {
+      "files": ["*.json", ".prettierrc"],
+      "options": {
+        "parser": "json"
+      }
+    }
+  ]
+}
